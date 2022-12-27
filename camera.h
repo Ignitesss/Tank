@@ -26,14 +26,14 @@ public:
 
 	Camera()
 	{
+		cam_yaw = -90.0f;
+		cam_pitch = -20.0f;
 		Pos = cam_offset;
 		Front = glm::vec3(0.0f, 0.0f, -1.0f);
 		Up = glm::vec3(0.0f, 1.0f, 0.0f);
 		view = glm::lookAt(Pos, Pos + Front, Up);
 		proj = glm::perspective(45.0f, 1.0f, 0.1f, 100.0f);
 		model = glm::mat4(1.0f);
-		cam_yaw = -90.0f;
-		cam_pitch = -20.0f;
 		Update();
 	}
 	
